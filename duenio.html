@@ -1,0 +1,695 @@
+<html lang="en">
+
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paarcas</title>
+
+        <!-- Load css styles -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="css/pluton.css" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="#" class="brand">
+                        <p>PAARCAS</p>
+                        <!-- This is website logo -->
+                    </a>
+                    <!-- Navigation button, visible on small resolution -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <!-- Main navigation -->
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav" id="top-navigation">
+                            <li class="active"><a href="#inicio">inicio</a></li>
+                            <li><a href="#servi">Servicio</a></li>
+                            <li><a href="#libros">libros</a></li>    
+
+                        </ul>
+                    </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+        <!-- Start home section -->
+        <div id="inicio">
+        </div>
+        
+        <!-- sevicio-->
+        <div class="section primary-section" id="servi">
+            <div class="container">
+                <!-- Start title section -->
+                <div class="title">
+                    <h1>Elige la categoria del libro a agregar</h1>
+
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="centered service">
+                            <a href="#literario" onclick="document.getElementById('literario').style.display = 'block'">
+                                <div class="circle-border zoom-in">
+                                    <img  class="img-circle" src="images/service001.jpg" alt="service 1">
+                                </div>
+                                <h3>Obras Literarias </h3>  
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <a href="#religioso" onclick="document.getElementById('religioso').style.display = 'block'">
+                                <div class="circle-border zoom-in">
+                                    <img class="img-circle" src="images/service002.jpg" alt="service 2" />
+                                </div>
+                                <h3>Obras Religiosas</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <a href="#poetica" onclick="document.getElementById('poetico').style.display = 'block'">
+                                <div class="circle-border zoom-in">
+                                    <img class="img-circle" src="images/service003.jpg" alt="service 3">
+                                </div>
+                                <h3>Obra Poeticas</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sevicio-->
+
+
+
+
+        <!-- categoria literaria-->
+        <div id="literario" style="display:none" >
+
+            <span onclick="document.getElementById('literario').style.display = 'none'" class="close" title="Cerrar">&times;</span>
+            <div  class="section third-section">
+                <div class="container newsletter">
+                    <div class="sub-section">
+                        <div class="title clearfix">
+                            <div class="pull-left">
+                                <h3>Obras Literarias</h3> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <div class="span7">
+                            <form class="inline-form" method="post" action="accion.php" enctype="multipart/form-data" autocomplete="o">
+                                <input type="number" name="isbn" id="isbn" class="span8" placeholder="Escriba codigo ISBN" required />
+                                <input type="text" name="titulo" id="titulo" class="span8" placeholder="Titulo del libro" required />
+                                <input type="number" name="pagina" id="pagina" class="span8" placeholder="Numero de paginas" required />
+                                <input type="number" name="cantidad" id="cantidad" class="span8" placeholder="Cantidad" required />
+                                <input type="number" name="compra" id="compra" class="span8" placeholder="Precio de  compra" required />
+                                <input type="number" name="venta" id="venta" class="span8" placeholder="Precio de  venta" required />
+                                <input type="number" name="publicado" id="publicado" class="span8" placeholder="Fecha de publicado" required />
+                                <input type="number" name="impuesto" id="impuesto" class="span8" placeholder="impuesto" required />
+                                <input type="text" name="pais" id="pais" class="span8" placeholder="Pais de publicacions" required />
+                                <br>
+                                Subir del libro:
+                                <input type="file" name="file" accept="image/*" id="file" class="inputfile" />
+                                <label for="file">Imagen</label>
+                                <br>
+                                <select type="text" id="categoria" class="span8">
+                                    <option value="literaria">literaria</option>
+
+
+                                </select>
+
+                            </form>
+                            <div style="text-align:right"> <button onclick="Duenio()" id="guardar" class="button button-sp" >Agregar Libro</button></div>             
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+        </div>
+         <!-- categoria literaria-->
+         
+         
+          <!-- categoria religiiosa-->
+
+        <div id="religioso" style="display:none" >
+
+            <span onclick="document.getElementById('religioso').style.display = 'none'" class="close" title="Cerrar">&times;</span>
+            <div  class="section third-section">
+                <div class="container newsletter">
+                    <div class="sub-section">
+                        <div class="title clearfix">
+                            <div class="pull-left">
+                                <h3>Obra Religiosa</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <div class="span7">
+                            <form class="inline-form" method="post" action="accion.php" enctype="multipart/form-data" autocomplete="o">
+                                <input type="number" name="risbn" id="risbn" class="span8" placeholder="Escriba codigo ISBN" required />
+                                <input type="text" name="rtitulo" id="rtitulo" class="span8" placeholder="Titulo del libro" required />
+                                <input type="number" name="rpagina" id="rpagina" class="span8" placeholder="Numero de paginas" required />
+                                <input type="number" name="rcantidad" id="rcantidad" class="span8" placeholder="Cantidad" required />
+                                <input type="number" name="rcompra" id="rcompra" class="span8" placeholder="Precio de  compra" required />
+                                <input type="number" name="rventa" id="rventa" class="span8" placeholder="Precio de  venta" required />
+                                <input type="number" name="rpublicado" id="rpublicado" class="span8" placeholder="Fecha de publicado" required />
+                                <input type="number" name="rimpuesto" id="rimpuesto" class="span8" placeholder="impuesto" required />
+                                <input type="text" name="rpais" id="rpais" class="span8" placeholder="Pais de publicacion" required />
+                                <input type="text" name="rlider" id="rlider" class="span8" placeholder="Lider Religioso" required />
+                                <select type="text" id="idioma" class="span8">
+                                    <option value="cristiano">cristianismo</option>
+                                    <option value="judio">judaísmo</option>
+                                    <option value="hindu">hinduismo</option>
+                                    <option value="islam">islam</option>
+                                    <option value="budismo">budismo</option>
+                                    <option value="deista">deísta</option>
+                                    <option value="otras">otras</option>
+
+
+                                </select>
+                                <select type="text" id="religion" class="span8">
+                                    <option value="español">Español</option>
+                                    <option value="ingles">Ingles</option>
+                                    <option value="frances">Frances</option>
+                                    <option value="latin">Latin</option>
+
+
+                                </select>
+                                <br>
+                                Subir del libro:
+                                <input type="file" name="file" accept="image/*" id="file" class="inputfile" />
+                                <label for="file">Imagen</label>
+                                <br>
+                                <select type="text" id="categoria" class="span8">
+
+                                    <option value="religiosa">Religiosa</option>
+
+
+                                </select>
+
+                            </form>
+                            <div style="text-align:right"> <button onclick="Duenio()" id="guardar" class="button button-sp" >Agregar Libro</button></div>             
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+          
+          
+       <!-- categoria poetica-->
+        <div id="poetico" style="display:none" >
+
+            <span onclick="document.getElementById('poetico').style.display = 'none'" class="close" title="Cerrar">&times;</span>
+            <div  class="section third-section">
+                <div class="container newsletter">
+                    <div class="sub-section">
+                        <div class="title clearfix">
+                            <div class="pull-left">
+                                <h3>Obra Poetica</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <div class="span7">
+                            <form class="inline-form" method="post" action="accion.php" enctype="multipart/form-data" autocomplete="o">
+                                <input type="number" name="pisbn" id="risbn" class="span8" placeholder="Escriba codigo ISBN" required />
+                                <input type="text" name="ptitulo" id="rtitulo" class="span8" placeholder="Titulo del libro" required />
+                                <input type="number" name="ppagina" id="rpagina" class="span8" placeholder="Numero de paginas" required />
+                                <input type="number" name=prcantidad" id="rcantidad" class="span8" placeholder="Cantidad" required />
+                                <input type="number" name="pcompra" id="rcompra" class="span8" placeholder="Precio de  compra" required />
+                                <input type="number" name="pventa" id="rventa" class="span8" placeholder="Precio de  venta" required />
+                                <input type="number" name="ppublicado" id="rpublicado" class="span8" placeholder="Fecha de publicado" required />
+                                <input type="number" name="pimpuesto" id="rimpuesto" class="span8" placeholder="impuesto" required />
+                                <input type="text" name="ppais" id="rpais" class="span8" placeholder="Pais de publicacion" required />
+                                <input type="text" name="ptipoescri" id="ptipoescri" class="span8" placeholder="Tipo de escritura" required />
+                                <input type="number" name="pedad" id="pedad" class="span8" placeholder="Edad minima para leer" required />
+                                <input type="number" name="ppoemas" id="ppoemas" class="span8" placeholder="Numero de pemas" required />
+
+                                <select type="text" id="audio" class="span8">
+                                    <option value="si">incluye audio</option>
+                                    <option value="si">No inclute audio</option>
+
+
+
+
+                                </select>
+
+                                <br>
+                                Subir del libro:
+                                <input type="file" name="file" accept="image/*" id="file" class="inputfile" />
+                                <label for="file">Imagen</label>
+                                <br>
+                                <select type="text" id="categoria" class="span8">
+
+                                    <option value="poetica">poetica</option>
+
+
+                                </select>
+
+                            </form>
+                            <div style="text-align:right"> <button onclick="Duenio()" id="guardar" class="button button-sp" >Agregar Libro</button></div>             
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- categoria poetica-->
+
+
+
+
+        <!-- imagenes -->
+
+        <div class="section secondary-section " id="libros">
+            <div class="triangle"></div>
+            <div class="container">
+                <div class=" title">
+                    <h1>Libros</h1>
+                    <p>Elige el libro que deseas.</p>
+                </div>
+                <ul class="nav nav-pills">
+                    <li class="filter" data-filter="all">
+                        <a href="#noAction">Todos</a>
+                    </li>
+                    <li class="filter" data-filter="web">
+                        <a href="#noAction">Mas Comprados</a>
+                    </li>
+                    <li class="filter" data-filter="photo">
+                        <a href="#noAction">Literarios</a>
+                    </li>
+                    <li class="filter" data-filter="identity">
+                        <a href="#noAction">religiosos</a>
+                    </li>
+                </ul>
+                
+                <!-- detalles del libro-->
+                <div id="single-project">
+                    <div id="slidingDiv" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio01.png" alt="project 1" />
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- detalles del libro-->
+                   
+                    <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio02.png" alt="project 2">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- detalles del libro-->
+                    <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio03.png" alt="project 3">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- detalles del libro-->
+                    <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio04.png" alt="project 4">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Project for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- detalles del libro-->
+                    <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio05.png" alt="project 5">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- detalles del libro-->
+                    <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio06.png" alt="project 6">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- detalles del libro-->
+                    <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio07.png" alt="project 7">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>Always continue the climb. It is possible for you to do whatever you choose, if you first get to know who you are and are willing to work with a power that is greater than ourselves to do it.</p>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- detalles del libro-->
+                    <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio08.png" alt="project 8">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>What if you gave someone a gift, and they neglected to thank you for it - would you be likely to give them another? Life is the same way. In order to attract more of the blessings that life has to offer, you must truly appreciate what you already have.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- detalles del libro-->
+                    <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
+                        <div class="span6">
+                            <img src="images/Portfolio09.png" alt="project 9">
+                        </div>
+                        <div class="span6">
+                            <div class="project-description">
+                                <div class="project-title clearfix">
+                                    <h3>Webste for Some Client</h3>
+                                    <span class="show_hide close">
+                                        <i class="icon-cancel"></i>
+                                    </span>
+                                </div>
+                                <div class="project-info">
+                                    <div>
+                                        <span>Client</span>Some Client Name</div>
+                                    <div>
+                                        <span>Date</span>July 2013</div>
+                                    <div>
+                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
+                                    <div>
+                                        <span>Link</span>http://examplecomp.com</div>
+                                </div>
+                                <p>I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                     
+                     
+                     
+                      <!-- previa-->
+                    <ul id="portfolio-grid" class="thumbnails row">
+                        <li class="span4 mix web">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio01.png" alt="project 1">
+                                <a href="#single-project" class="more show_hide" rel="#slidingDiv">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix photo">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio02.png" alt="project 2">
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv1">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix identity">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio03.png" alt="project 3">
+                                <a href="#single-project" class="more show_hide" rel="#slidingDiv2">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix web">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio04.png" alt="project 4">
+                                <a href="single-project" class="show_hide more" rel="#slidingDiv3">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix photo">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio05.png" alt="project 5">
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv4">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix identity">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio06.png" alt="project 6">
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv5">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix web">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio07.png" alt="project 7" />
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv6">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix photo">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio08.png" alt="project 8">
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv7">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                        <li class="span4 mix identity">
+                            <div class="thumbnail">
+                                <img src="images/Portfolio09.png" alt="project 9">
+                                <a href="#single-project" class="show_hide more" rel="#slidingDiv8">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <h3>Thumbnail label</h3>
+                                <p>Thumbnail caption...</p>
+                                <div class="mask"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="iniciar"></div>
+
+
+
+
+
+ <!-- voton pa arriba -->
+
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
+
+
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="js/jquery.cslider.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/jquery.inview.js"></script>
+
+
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
